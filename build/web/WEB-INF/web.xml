@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+    version="6.0">
+
+    <!-- ==================== CONFIGURAÇÃO GERAL ==================== -->
+    <display-name>crudjdbc</display-name>
+    <description>Aplicação CRUD MVC com login e avaliações</description>
+
+    <!-- Configuração de codificação UTF-8 -->
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ignore</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <!-- ==================== LOGIN CONTROLLER ==================== -->
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>controller.LoginController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ==================== PRODUTO CONTROLLER ==================== -->
+    <servlet>
+        <servlet-name>ProdutoController</servlet-name>
+        <servlet-class>controller.ProdutoController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProdutoController</servlet-name>
+        <url-pattern>/produtos</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProdutoController</servlet-name>
+        <url-pattern>/produtos/novo</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProdutoController</servlet-name>
+        <url-pattern>/produtos/salvar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProdutoController</servlet-name>
+        <url-pattern>/produtos/editar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProdutoController</servlet-name>
+        <url-pattern>/produtos/excluir</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProdutoController</servlet-name>
+        <url-pattern>/produtos/avaliar</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ==================== AVALIAÇÃO CONTROLLER ==================== -->
+    <servlet>
+        <servlet-name>AvaliacaoController</servlet-name>
+        <servlet-class>controller.AvaliacaoController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AvaliacaoController</servlet-name>
+        <url-pattern>/avaliacoes</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AvaliacaoController</servlet-name>
+        <url-pattern>/avaliacoes/listar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AvaliacaoController</servlet-name>
+        <url-pattern>/avaliacoes/salvar</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ==================== PÁGINA INICIAL ==================== -->
+<welcome-file-list>
+    <welcome-file>views/login/login.jsp</welcome-file>
+</welcome-file-list>
+
+</web-app>
