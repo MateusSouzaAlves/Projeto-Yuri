@@ -2,12 +2,10 @@ package controller;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
 import dao.UsuarioDAO;
 import model.Usuario;
 import java.io.IOException;
 
-@WebServlet(name = "LoginController", urlPatterns = {"/login", "/logout"})
 public class LoginController extends HttpServlet {
 
 @Override

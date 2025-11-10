@@ -7,13 +7,11 @@ import java.util.ArrayList;
 import dao.ProdutoDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Produto;
 
-@WebServlet(name = "ProdutoController", urlPatterns = {"/produtos","/produtos/novo","/produtos/salvar","/produtos/editar","/produtos/excluir","/produtos/avaliar"})
 public class ProdutoController extends HttpServlet {
     private final ProdutoDAO produtoDAO = new ProdutoDAO();
 

@@ -59,8 +59,8 @@ crudjdbcyoutube 4/
 
 ## 3) Requisitos de Ambiente
 
-* **JDK**: 17 (recomendado para Tomcat 10.1.x)
-* **Servidor**: **Apache Tomcat 10.1+**
+* **JDK**: 25 (recomendado para Tomcat 11.1.x)
+* **Servidor**: **Apache Tomcat 11.1+**
 * **Banco**: **MySQL 8+**
 * **Driver JDBC**: `mysql-connector-j 8.x` (copiar para `WEB-INF/lib`)
 
